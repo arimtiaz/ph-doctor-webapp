@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faLightbulb} from '@fortawesome/free-regular-svg-icons'
 import React, { useRef, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { useNavigate } from "react-router-dom";
@@ -7,6 +9,7 @@ const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+
   const [
     createUserWithEmailAndPassword,
     user,
@@ -15,13 +18,21 @@ const SignUp = () => {
   ] = useCreateUserWithEmailAndPassword(auth)
   
   const navigate = useNavigate();
+
+  if (loading) {
+    return <p className="text-xl font-semibold text-center text-gray-900 align-middle">
+      <FontAwesomeIcon icon={faLightbulb} className='mr-3'></FontAwesomeIcon>
+      Loading
+      </p>;
+  }
+
   if(user){
     navigate('/home');
 }
 
 
   return (
-    <div>
+    <div className="">
       <section class="bg-gray-50 dark:bg-gray-900">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -42,6 +53,7 @@ const SignUp = () => {
                   <input
                     type="email"
                     name="email"
+                    value={email}
                     id="email"
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="someone@lorem.com"
@@ -61,6 +73,7 @@ const SignUp = () => {
                   <input
                     type="password"
                     name="password"
+                    value={password}
                     id="password"
                     placeholder="••••••••"
                     class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
