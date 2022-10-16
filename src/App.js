@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Error from './Pages/Error';
 import Home from './Pages/Home/Home';
-import Service from './Pages/Home/Service/Service';
+import Service from './Pages/Home/Services/Services';
 import Login from './Pages/Login/Login';
 import Navbar from './Pages/Navbar/Navbar';
 import SignUp from './Pages/SignUp/SignUp';

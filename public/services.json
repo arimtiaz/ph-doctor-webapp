@@ -1,0 +1,19 @@
+[
+    {
+        "id": 1,
+        "serviceName": "Cardiac Rehabilition",
+        "service-description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo qui, nam aperiam cupiditate"
+    },
+    {
+        "id": 2,
+        "serviceName": "Food Habit",
+        "service-description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo qui, nam aperiam cupiditate",
+        "icon": "faCalendarCheck"
+    },
+    {
+        "id": 1,
+        "serviceName": "Staying Happy",
+        "service-description":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo qui, nam aperiam cupiditate",
+        "icon": "faKissWinkHeart"
+    }
+]
