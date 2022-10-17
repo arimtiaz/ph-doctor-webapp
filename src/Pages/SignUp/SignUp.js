@@ -4,6 +4,7 @@ import React, { useRef, useState } from "react";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -33,6 +34,7 @@ const SignUp = () => {
 
   return (
     <div className="">
+      <div>
       <section class="bg-gray-50 dark:bg-gray-900">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
           <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
@@ -148,6 +150,8 @@ const SignUp = () => {
           </div>
         </div>
       </section>
+  
+      </div>
     </div>
   );
 };
